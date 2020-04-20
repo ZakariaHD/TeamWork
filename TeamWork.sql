@@ -10,12 +10,17 @@ If  not Exists (select loginname from master.dbo.syslogins   where name = @login
 Begin
    CREATE LOGIN uwork WITH PASSWORD='uwork'
 End
-
+If   Exists (select name from master.dbo.sysdatabases   where name='TeamWork')
+	
+Begin
+DROP DATABASE TeamWork
+end
 ---- Declaration 
-declare  @Name VARCHAR(20)
+--declare  @Name VARCHAR(20)
 ---- Replissage
-set  @Name= 'TeamWork'
-If  not Exists (select name from master.dbo.sysdatabases   where name=@Name)
+--set  @Name= 'TeamWork'
+
+If  not Exists (select name from master.dbo.sysdatabases   where name='TeamWork')
 	
 Begin
 EXEC master.sys.xp_create_subdir 'C:\Team'
