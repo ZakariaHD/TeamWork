@@ -49,9 +49,41 @@ DELETE FROM Client where client_id = 8
 end
 insert into Client values(8,'rabab','amina','yakoub mansour marrakech','0612019982');
 
---inserstion des persone
-insert into Personne values(1,'Tarik','ziari',' rabat');
-insert into Personne values(2,'adil','taggine','casa');
-insert into Personne values(3,'khalid','abba','kenitra');
-insert into Personne values(4,'zakaria','hadada',' sidi hya');
-insert into Personne values(5,'hamid','bartal',' sidi kacem');
+use TeamWork
+--Insertion des personns
+If  Exists (SELECT  id_personne FROM Personne  where id_personne = 1)
+	
+Begin
+DELETE FROM Personne where id_personne = 1
+end
+insert into Personne values('Tarik','ziari','yk457812','hay nahda','khnichat','0455781265','tarik@gmail.com','06/03/1979','06/01/2017','celebataire');
+If  Exists (SELECT  id_personne FROM Personne  where id_personne = 2)
+	
+Begin
+DELETE FROM Personne where id_personne = 2
+end
+insert into Personne values('adil','taggine','zq4567812','hay toum','ain ouda','06363654789','adiltagain@gmail.com','06/04/1599','06/03/2020','marie');
+If  Exists (SELECT  id_personne FROM Personne  where id_personne = 3)
+	
+Begin
+DELETE FROM Personne where id_personne = 3
+end
+insert into Personne values('khalid','abba','et457812','hay lkarama ','sidi yahya','062354871','khalidaaba@gmail.com','06/04/1999','06/04/2018','marie');
+If  Exists (SELECT  id_personne FROM Personne  where id_personne = 4)
+	
+Begin
+DELETE FROM Personne where id_personne = 4
+end
+insert into Personne values('zakaria','hadada','cm457812','avenu najat ','gercuf','06235684','zakariahdada@gmail.com','06/04/2000','09/01/2013','celebataire');
+If  Exists (SELECT  id_personne FROM Personne  where id_personne = 5)
+	
+Begin
+DELETE FROM Personne where id_personne = 5
+end
+insert into Personne values( 'hamid','bartal','cv457812','rue mohamed 6','sefrou','0612019982','hamidbertal@gmail.com','2002/12/02','2020/04/20','celebataire');
+If  Exists (SELECT  id_personne FROM Personne  where id_personne = 6)
+	
+Begin
+DELETE FROM Personne where id_personne = 6
+end
+
